@@ -46,7 +46,7 @@ export default function TerminalPortfolio() {
             className="w-full h-full object-cover"
           />
         </div>
-        <h1 className="text-2xl mb-6 text-green-400">Neil Jay's Terminal</h1>
+        <h1 className="text-2xl mb-6 text-green-400">Neil Jay&#39;s Terminal</h1>
         <div className="w-full bg-gray-900 rounded-lg shadow-lg p-4 mb-6 flex-grow border border-green-400">
           <div className="flex items-center mb-4">
             <div className="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
