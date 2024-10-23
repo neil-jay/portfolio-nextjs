@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { Terminal } from 'lucide-react'
+// import { Terminal } from 'lucide-react'
 import Image from 'next/image'
 
 export default function TerminalPortfolio() {
