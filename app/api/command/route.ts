@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
       result = 'Available commands: about, skills, projects, contact';
       break;
     case 'about':
-      result = "I'm a passionate developer with a knack for cybersecurity and innovative solutions.";
+      result = "I'm a Priest by Vocation, Developer by Passion, Cyber Defender by Obsession.";
       break;
     case 'skills':
       result = 'JavaScript, Python, SQL, Network Security, Penetration Testing';
