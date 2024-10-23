@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function TerminalPortfolio() {
   const [input, setInput] = useState('')
-  const [output, setOutput] = useState<string[]>(['Welcome to my hacker portfolio! Type "help" for a list of commands.'])
+  const [output, setOutput] = useState<string[]>(['Welcome to my portfolio! Type "help" for a list of commands.'])
 
   const handleCommand = useCallback(async (cmd: string) => {
     const response = await fetch('/api/command', {
@@ -39,14 +39,14 @@ export default function TerminalPortfolio() {
       <div className="flex-grow flex flex-col items-center justify-start max-w-2xl mx-auto w-full">
         <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-green-400">
           <Image
-            src="/neiljay-cf.png"
-            alt="Hackerman's profile picture"
+            src="/neiljay.png"
+            alt="neiljay's profile picture"
             width={128}
             height={128}
             className="w-full h-full object-cover"
           />
         </div>
-        <h1 className="text-2xl mb-6 text-green-400">Hackerman's Terminal Portfolio</h1>
+        <h1 className="text-2xl mb-6 text-green-400">Neil Jay's Terminal</h1>
         <div className="w-full bg-gray-900 rounded-lg shadow-lg p-4 mb-6 flex-grow border border-green-400">
           <div className="flex items-center mb-4">
             <div className="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
@@ -71,7 +71,7 @@ export default function TerminalPortfolio() {
         </div>
       </div>
       <footer className="text-center text-sm mt-4 text-green-400">
-        © 2024 Hackerman. All rights reserved.
+        © 2024 neiljay. All rights reserved.
       </footer>
     </div>
   )

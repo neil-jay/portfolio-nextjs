@@ -12,10 +12,10 @@ export async function POST(request: NextRequest) {
       result = "I'm a passionate developer with a knack for cybersecurity and innovative solutions."
       break
     case 'skills':
-      result = 'JavaScript, React, Node.js, Python, SQL, Network Security, Penetration Testing'
+      result = 'JavaScript, Python, SQL, Network Security, Penetration Testing'
       break
     case 'projects':
-      result = '1. Secure E-commerce platform\n2. Encrypted messaging app\n3. Vulnerability scanner'
+      result = '1. Secure Online Library Platform\n2. Business Websites\n3. Vulnerability Scanner'
       break
     case 'contact':
       result = `
