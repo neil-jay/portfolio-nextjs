@@ -39,7 +39,7 @@ export default function TerminalPortfolio() {
       <div className="flex-grow flex flex-col items-center justify-start max-w-2xl mx-auto w-full">
         <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-green-400">
           <Image
-            src="/neiljay.png"
+            src="/neiljay.webp"
             alt="neiljay's profile picture"
             width={128}
             height={128}
