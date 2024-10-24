@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
       result = 'JavaScript, Python, SQL, Network Security, Penetration Testing';
       break;
     case 'projects':
-      result = '1. Secure Online Library Platform\n2. Business Websites\n3. Vulnerability Scanner';
+      result = '1. Online Library Platform\n2. Business Websites\n3. Vulnerability Scanner';
       break;
     case 'contact':
       result = `
