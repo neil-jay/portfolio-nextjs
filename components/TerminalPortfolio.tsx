@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function TerminalPortfolio() {
   const [input, setInput] = useState('')
-  const [output, setOutput] = useState<string[]>(['Welcome to my portfolio! Type "help" for a list of commands.'])
+  const [output, setOutput] = useState<string[]>(['Welcome to my space! Type "help" for a list of commands.'])
 
   const handleCommand = useCallback(async (cmd: string) => {
     const response = await fetch('/api/command', {
