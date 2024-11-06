@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 // Enable Edge Runtime
-export const runtime = 'edge';
+// export const runtime = 'edge';
 
 export async function POST(request: NextRequest) {
   const { command } = await request.json();
@@ -18,7 +18,12 @@ export async function POST(request: NextRequest) {
       result = 'JavaScript, Python, SQL, Network Security, Penetration Testing';
       break;
     case 'projects':
-      result = '1. Online Library Platform\n2. Business Portfolios\n3. With Joyful Lips Lyrics Portal\n4. Certificate Generators';
+      result = `
+      1. <a href="https://sjrslms.in/" target="_blank" rel="noopener noreferrer" class="text-green-400 hover:text-green-300">Online Library Platform</a>
+      2. <a href="https://ecoarecaleaf.com" target="_blank" rel="noopener noreferrer" class="text-green-400 hover:text-green-300">Eco Areca Leaf Brand</a>
+      3. <a href="https://withjoyfullipslyrics.neiljay.com/" target="_blank" rel="noopener noreferrer" class="text-green-400 hover:text-green-300">With Joyful Lips Lyrics Portal</a>
+      4. <a href="https://github.com/neil-jay/" target="_blank" rel="noopener noreferrer" class="text-green-400 hover:text-green-300">Certificate Generators</a>
+      `
       break;
     case 'contact':
       result = `

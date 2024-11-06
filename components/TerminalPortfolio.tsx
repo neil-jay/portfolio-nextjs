@@ -1,12 +1,12 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-// import { Terminal } from 'lucide-react'
 import Image from 'next/image'
 
 export default function TerminalPortfolio() {
   const [input, setInput] = useState('')
-  const [output, setOutput] = useState<string[]>(['Welcome to my space! Type "help" for a list of commands.'])
+  const [output, setOutput] = useState<Array<{ text: string; isHtml: boolean }>>([
+    { text: 'Welcome to my space! Type "help" for a list of commands.', isHtml: false },])
 
   const handleCommand = useCallback(async (cmd: string) => {
     const response = await fetch('/api/command', {
@@ -23,7 +23,11 @@ export default function TerminalPortfolio() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     const result = await handleCommand(input)
-    setOutput(prev => [...prev, `$ ${input}`, result])
+    setOutput(prev => [
+      ...prev,
+      { text: `$ ${input}`, isHtml: false },
+      { text: result, isHtml: input.toLowerCase() === 'projects' }
+    ])
     setInput('')
   }
 
@@ -55,7 +59,13 @@ export default function TerminalPortfolio() {
           </div>
           <div id="terminal" className="text-sm h-80 overflow-y-auto mb-4 whitespace-pre-wrap">
             {output.map((line, index) => (
-              <div key={index}>{line}</div>
+              <div key={index}>
+              {line.isHtml ? (
+                <div dangerouslySetInnerHTML={{ __html: line.text }} />
+              ) : (
+                line.text
+              )}
+            </div>
             ))}
           </div>
           <form onSubmit={handleSubmit} className="flex items-center">
